@@ -1,15 +1,33 @@
+@font-face {
+  font-family: Exo Light;
+  src: url(../fonts/Exo/Exo-Light.ttf);
+}
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  color: white;
+  font-family: "Lato";
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
 
 header {
-  height: 550px;
   width: 100%;
   position: relative;
+}
+
+main {
+  text-align: center;
+  color: black;
+  margin: 0 auto;
+  max-width: 1200px;
+  font-family: "Exo Light";
 }
 
 .header-background {
@@ -28,10 +46,9 @@ header {
 
 .menu-button {
   margin: 35px 30px;
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: relative;
   height: 75px;
+  float: right;
 }
 
 .menu-button:hover {
@@ -47,6 +64,67 @@ header {
   height: 15px;
   border-bottom: 4px solid white;
   border-top: 4px solid white;
+}
+
+.header-content {
+  padding-top: 80px;
+  padding-bottom: 200px;
+  text-align: center;
+}
+
+.header-content h1 {
+  margin: 8px;
+  font-size: 72px;
+  color: #e1007e;
+}
+
+.breadcrumbs a {
+  font-size: 17px;
+}
+
+.breadcrumbs img {
+  margin: 0 12px 0 12px;
+}
+
+main h2 {
+  margin: 50px 0;
+  font-size: 30px;
+  color: #e1007e;
+}
+
+.info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 75px;
+  padding-bottom: 100px;
+}
+
+.info {
+  font-size: 20px;
+  color: #e1007e;
+  position: relative;
+}
+
+.info-header {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  grid-gap: 10px;
+}
+
+.info-header::before {
+  content: "";
+  border-top: 2px dotted black;
+  width: 100%;
+  display: inline-block;
+  margin-top: 12px;
+}
+
+.info-header::after {
+  content: "";
+  border-top: 2px dotted black;
+  width: 100%;
+  display: inline-block;
+  margin-top: 12px;
 }
 
 /*# sourceMappingURL=styles.css.map */
