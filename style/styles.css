@@ -2,6 +2,14 @@
   font-family: Exo Light;
   src: url(../fonts/Exo/Exo-Light.ttf);
 }
+@font-face {
+  font-family: Exo Bold;
+  src: url(../fonts/Exo/Exo-Bold.ttf);
+}
+@font-face {
+  font-family: Exo Regular;
+  src: url(../fonts/Exo/Exo-Regular.ttf);
+}
 * {
   box-sizing: border-box;
 }
@@ -9,12 +17,12 @@
 body {
   margin: 0;
   color: white;
-  font-family: "Lato";
 }
 
 a {
   color: white;
   text-decoration: none;
+  font-family: "Lato";
 }
 
 header {
@@ -24,10 +32,19 @@ header {
 
 main {
   text-align: center;
-  color: black;
+  color: #333333;
   margin: 0 auto;
-  max-width: 1200px;
+  padding: 0 20px;
+  max-width: 1240px;
   font-family: "Exo Light";
+}
+
+p {
+  font-size: 18px;
+}
+
+strong {
+  font-family: "Exo Bold";
 }
 
 .header-background {
@@ -73,6 +90,7 @@ main {
 }
 
 .header-content h1 {
+  font-family: "Exo Bold";
   margin: 8px;
   font-size: 72px;
   color: #e1007e;
@@ -96,16 +114,16 @@ main h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 75px;
-  padding-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .info {
   font-size: 20px;
-  color: #e1007e;
   position: relative;
 }
 
 .info-header {
+  color: #e1007e;
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   grid-gap: 10px;
@@ -113,7 +131,7 @@ main h2 {
 
 .info-header::before {
   content: "";
-  border-top: 2px dotted black;
+  border-top: 3px dotted #d3d2d2;
   width: 100%;
   display: inline-block;
   margin-top: 12px;
@@ -121,10 +139,84 @@ main h2 {
 
 .info-header::after {
   content: "";
-  border-top: 2px dotted black;
+  border-top: 3px dotted #d3d2d2;
   width: 100%;
   display: inline-block;
   margin-top: 12px;
+}
+
+.values {
+  margin: 15px 0;
+}
+
+.values p {
+  display: inline;
+  margin: 0 8px;
+}
+
+.info-bottom-border {
+  height: 12px;
+}
+
+.bottom-border {
+  width: 100%;
+  border-bottom: 3px dotted #d3d2d2;
+}
+
+.iframe-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.description {
+  margin: 50px 0 40px 0;
+  text-align: left;
+}
+
+.description p {
+  margin-bottom: 35px;
+}
+
+.underline p {
+  text-decoration: underline;
+  text-decoration-color: #696969;
+}
+
+.navigation-container {
+  text-align: center;
+  padding: 30px 0 50px 0;
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  white-space: nowrap;
+}
+
+.navigation-name {
+  font-family: "Exo Bold";
+  font-size: 25px;
+  color: #e1007e;
+}
+
+.navigation-direction {
+  font-family: "Exo Regular";
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
 }
 
 /*# sourceMappingURL=styles.css.map */
