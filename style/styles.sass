@@ -1,6 +1,7 @@
 $purple: #e1007e
 $gray: #333333
 $light-gray: #cccccc
+$footer-background: #f0f0f0
 
 @font-face
     font-family: Exo Light
@@ -28,7 +29,7 @@ header
     width: 100%
     position: relative
 
-main
+.container
     text-align: center
     color: $gray
     margin: 0 auto
@@ -234,7 +235,6 @@ main h2
 
 $icons: ("facebook":#3f5599,"twitter": #5fa9ef,"google": #d84335,"pinterest": #c70126,"email":#6fb4e4,"print":#3f96d6)
 
-
 @each $icon, $color in $icons
     .#{$icon}
         background-color: $color
@@ -243,6 +243,13 @@ $icons: ("facebook":#3f5599,"twitter": #5fa9ef,"google": #d84335,"pinterest": #c
     .#{$icon}.hexagon:after
         border-top-color: $color
 
+footer
+    background-color: $footer-background
+    padding: 60px 0
 
-
-
+.footer-container
+    text-align: center
+    color: $gray
+    padding: 0 20px
+    margin: 0 auto
+    max-width: 1240px

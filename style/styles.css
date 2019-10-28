@@ -30,7 +30,7 @@ header {
   position: relative;
 }
 
-main {
+.container {
   text-align: center;
   color: #333333;
   margin: 0 auto;
@@ -339,6 +339,19 @@ main h2 {
 
 .print.hexagon:after {
   border-top-color: #3f96d6;
+}
+
+footer {
+  background-color: #f0f0f0;
+  padding: 60px 0;
+}
+
+.footer-container {
+  text-align: center;
+  color: #333333;
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1240px;
 }
 
 /*# sourceMappingURL=styles.css.map */
