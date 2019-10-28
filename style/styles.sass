@@ -1,5 +1,6 @@
 $purple: #e1007e
 $gray: #333333
+$light-gray: #cccccc
 
 @font-face
     font-family: Exo Light
@@ -40,7 +41,6 @@ p
 
 strong
     font-family: 'Exo Bold'
-
 
 .header-background
     background-image: url(../images/header-img.png)
@@ -87,10 +87,10 @@ strong
 .breadcrumbs a
     font-size: 17px
 
-.breadcrumbs img
+.breadcrumbs i
     margin: 0 12px 0 12px
 
-main h2 
+main h2
     margin: 50px 0
     font-size: 30px
     color: $purple
@@ -118,7 +118,6 @@ main h2
     display: inline-block
     margin-top: 12px
 
-
 .info-header::after
     content: ""
     border-top: 3px dotted #d3d2d2
@@ -134,7 +133,7 @@ main h2
     margin: 0 8px
 
 .info-bottom-border
-    height:  12px
+    height: 12px
 
 .bottom-border
     width: 100%
@@ -156,6 +155,14 @@ main h2
     margin: 50px 0 40px 0
     text-align: left
 
+.navigation i
+    color: $light-gray
+    display: inline
+
+.navigation > div
+    display: inline-block
+    margin: 0 20px
+
 .description p
     margin-bottom: 35px
 
@@ -165,9 +172,9 @@ main h2
 
 .navigation-container
     text-align: center
-    padding: 30px 0 50px 0
+    padding: 30px 0 60px 0
     display: grid
-    grid-template-columns: min-content 1fr min-content 
+    grid-template-columns: min-content 1fr min-content
     white-space: nowrap
 
 .navigation-name
@@ -186,9 +193,56 @@ main h2
 .right
     text-align: right
 
-$facebook: #3f5599
-$twitter: #5fa9ef
-$google: #d84335
-$pinterest: #c70126
-$email: #6fb4e4
-$print: #3f96d6
+
+.fa
+    color: white  
+
+.social
+    padding-top: 20px
+
+.hexagon
+    margin-right: -1.5px 
+    margin-left: -1.5px
+    display: inline-block
+    width: 40px
+    height: 24px
+    position: relative
+    text-align: center
+
+    &:before
+        content: ""
+        position: absolute
+        top: -10px
+        left: 0
+        width: 0
+        height: 0
+        border-left: 20px solid transparent
+        border-right: 20px solid transparent
+        border-bottom: 10px solid
+        
+
+    &:after
+        content: ""
+        position: absolute
+        bottom: -10px
+        left: 0
+        width: 0
+        height: 0
+        border-left: 20px solid transparent
+        border-right: 20px solid transparent
+        border-top: 10px solid #5F6062 
+
+$icons: ("facebook":#3f5599,"twitter": #5fa9ef,"google": #d84335,"pinterest": #c70126,"email":#6fb4e4,"print":#3f96d6)
+
+
+@each $icon, $color in $icons
+    .#{$icon}
+        background-color: $color
+    .#{$icon}.hexagon:before
+        border-bottom-color: $color
+    .#{$icon}.hexagon:after
+        border-top-color: $color
+
+
+
+

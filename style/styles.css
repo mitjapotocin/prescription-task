@@ -100,7 +100,7 @@ strong {
   font-size: 17px;
 }
 
-.breadcrumbs img {
+.breadcrumbs i {
   margin: 0 12px 0 12px;
 }
 
@@ -182,6 +182,16 @@ main h2 {
   text-align: left;
 }
 
+.navigation i {
+  color: #cccccc;
+  display: inline;
+}
+
+.navigation > div {
+  display: inline-block;
+  margin: 0 20px;
+}
+
 .description p {
   margin-bottom: 35px;
 }
@@ -193,7 +203,7 @@ main h2 {
 
 .navigation-container {
   text-align: center;
-  padding: 30px 0 50px 0;
+  padding: 30px 0 60px 0;
   display: grid;
   grid-template-columns: min-content 1fr min-content;
   white-space: nowrap;
@@ -217,6 +227,118 @@ main h2 {
 
 .right {
   text-align: right;
+}
+
+.fa {
+  color: white;
+}
+
+.social {
+  padding-top: 20px;
+}
+
+.hexagon {
+  margin-right: -1.5px;
+  margin-left: -1.5px;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  position: relative;
+  text-align: center;
+}
+.hexagon:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 10px solid;
+}
+.hexagon:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 10px solid #5F6062;
+}
+
+.facebook {
+  background-color: #3f5599;
+}
+
+.facebook.hexagon:before {
+  border-bottom-color: #3f5599;
+}
+
+.facebook.hexagon:after {
+  border-top-color: #3f5599;
+}
+
+.twitter {
+  background-color: #5fa9ef;
+}
+
+.twitter.hexagon:before {
+  border-bottom-color: #5fa9ef;
+}
+
+.twitter.hexagon:after {
+  border-top-color: #5fa9ef;
+}
+
+.google {
+  background-color: #d84335;
+}
+
+.google.hexagon:before {
+  border-bottom-color: #d84335;
+}
+
+.google.hexagon:after {
+  border-top-color: #d84335;
+}
+
+.pinterest {
+  background-color: #c70126;
+}
+
+.pinterest.hexagon:before {
+  border-bottom-color: #c70126;
+}
+
+.pinterest.hexagon:after {
+  border-top-color: #c70126;
+}
+
+.email {
+  background-color: #6fb4e4;
+}
+
+.email.hexagon:before {
+  border-bottom-color: #6fb4e4;
+}
+
+.email.hexagon:after {
+  border-top-color: #6fb4e4;
+}
+
+.print {
+  background-color: #3f96d6;
+}
+
+.print.hexagon:before {
+  border-bottom-color: #3f96d6;
+}
+
+.print.hexagon:after {
+  border-top-color: #3f96d6;
 }
 
 /*# sourceMappingURL=styles.css.map */
