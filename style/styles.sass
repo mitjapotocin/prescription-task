@@ -59,9 +59,10 @@ strong
 
 .menu-button
     margin: 35px 30px
-    position: relative
+    position: absolute
     height: 75px
-    float: right
+    right: 0
+    top: 0
 
 .popup-menu-button
     margin: 35px 30px
@@ -108,7 +109,7 @@ main h2
 .info-container
     display: grid
     grid-template-columns: 1fr 1fr
-    grid-gap: 75px
+    grid-gap: 5%
     margin-bottom: 50px
 
 .info
@@ -344,8 +345,8 @@ footer
         &::after
             border-top-color: $footer-color
 
-.footer-logo, .footer-links, .address
-    display: inline-block
+// .footer-logo, .footer-links, .address
+//     display: inline-block
 
 .footer-logo
     position: relative
@@ -355,4 +356,39 @@ footer
     display: grid
     grid-template-columns: min-content minmax(700px, 1fr) min-content
 
+@media screen and (max-width: 1020px)
+    .values p
+        display: block
+        margin: 10px 0
+    .footer
+        display: block
+        margin-top: -15px
 
+
+@media screen and (max-width: 760px)
+    .social
+        display: none
+    .breadcrumbs a
+        font-size: 28px
+    main h2
+        font-size: 40px
+        text-align: left
+
+@media screen and (max-width: 580px)
+    .breadcrumbs a
+        font-size: 4.5vw
+    .header-content h1
+        font-size: 12.3vw
+    main h2
+        font-size: 6.8vw
+
+
+@media screen and (max-width: 460px)
+    .header-logo
+        opacity: 0
+    .navigation > div
+        display: none
+    .info-container
+        display: block
+    .bottom-border
+        display: none
