@@ -346,12 +346,64 @@ footer {
   padding: 60px 0;
 }
 
-.footer-container {
-  text-align: center;
-  color: #333333;
-  padding: 0 20px;
-  margin: 0 auto;
-  max-width: 1240px;
+.popup-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  background-image: url(../images/prescripton-logo-big.png);
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
+  background-position-y: bottom;
+  background-size: 650px;
+  background-color: #0d1a28;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.menu-items {
+  float: right;
+}
+
+.menu-item {
+  overflow: hidden;
+  height: 100px;
+  width: 600px;
+  padding: 18px;
+  margin-bottom: 9px;
+  font-family: "Exo Bold";
+  font-size: 50px;
+  text-transform: uppercase;
+  color: white;
+  position: relative;
+  top: 150px;
+  left: 150px;
+  transform: rotate(-25deg);
+}
+
+.menu-item:last-child {
+  text-transform: none;
+}
+
+.menu-item:nth-child(1) {
+  background-color: #f9be18;
+}
+
+.menu-item:nth-child(2) {
+  background-color: #f99442;
+}
+
+.menu-item:nth-child(3) {
+  background-color: #f8656c;
+}
+
+.menu-item:nth-child(4) {
+  background-color: #e2008a;
+}
+
+.menu-item:nth-child(5) {
+  background-color: #b6419b;
 }
 
 /*# sourceMappingURL=styles.css.map */

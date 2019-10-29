@@ -2,6 +2,7 @@ $purple: #e1007e
 $gray: #333333
 $light-gray: #cccccc
 $footer-background: #f0f0f0
+$nav-background: #0d1a28
 
 @font-face
     font-family: Exo Light
@@ -247,9 +248,51 @@ footer
     background-color: $footer-background
     padding: 60px 0
 
-.footer-container
-    text-align: center
-    color: $gray
-    padding: 0 20px
-    margin: 0 auto
-    max-width: 1240px
+// .footer-container
+//     text-align: center
+//     color: $gray
+//     padding: 0 20px
+//     margin: 0 auto
+//     max-width: 1240px
+
+.popup-menu
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    bottom: 0
+    background-image: url(../images/prescripton-logo-big.png) 
+    background-repeat: no-repeat
+    background-blend-mode: lighten
+    background-position-y: bottom
+    background-size: 650px
+    background-color: $nav-background
+    z-index: 10
+    overflow: hidden
+
+.menu-items
+    float: right
+
+.menu-item
+    overflow: hidden
+    height: 100px
+    width: 600px
+    padding: 18px
+    margin-bottom: 9px
+    font-family: 'Exo Bold'
+    font-size: 50px
+    text-transform: uppercase
+    color: white
+    position: relative
+    top:150px
+    left: 150px
+    transform: rotate(-25deg) 
+
+.menu-item:last-child
+    text-transform: none
+
+$menu-colors: ("1": #f9be18, "2": #f99442, "3": #f8656c, "4": #e2008a, "5": #b6419b)
+
+@each $number, $color in $menu-colors
+    .menu-item:nth-child(#{$number})
+        background-color: $color
