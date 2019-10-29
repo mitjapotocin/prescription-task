@@ -62,7 +62,14 @@ strong
     height: 75px
     float: right
 
-.menu-button:hover
+.popup-menu-button
+    margin: 35px 30px
+    position: absolute
+    height: 35px
+    right:0
+    top: 0
+
+.menu-button:hover, .popup-menu-button:hover
     cursor: pointer
 
 .menu-button-lines
@@ -256,6 +263,7 @@ footer
 //     max-width: 1240px
 
 .popup-menu
+    display: none
     position: fixed
     top: 0
     left: 0
@@ -265,28 +273,35 @@ footer
     background-repeat: no-repeat
     background-blend-mode: lighten
     background-position-y: bottom
-    background-size: 650px
+    background-size: 40%
     background-color: $nav-background
     z-index: 10
     overflow: hidden
 
 .menu-items
     float: right
+    top: 50%
+    position: relative
+    transform: translateY(-50%) translateX(15%)
+    
 
 .menu-item
     overflow: hidden
-    height: 100px
-    width: 600px
-    padding: 18px
-    margin-bottom: 9px
+    height: 10vh
+    width: 50vh
     font-family: 'Exo Bold'
-    font-size: 50px
+    margin-top: 1vh
     text-transform: uppercase
     color: white
     position: relative
-    top:150px
-    left: 150px
     transform: rotate(-25deg) 
+
+.menu-item span
+    font-size: 4vh
+    position: relative
+    top: 2.5vh
+    left: 3.5vh
+    
 
 .menu-item:last-child
     text-transform: none
@@ -296,3 +311,15 @@ $menu-colors: ("1": #f9be18, "2": #f99442, "3": #f8656c, "4": #e2008a, "5": #b64
 @each $number, $color in $menu-colors
     .menu-item:nth-child(#{$number})
         background-color: $color
+
+.cross
+    position: absolute
+    top: 37px
+    right: 16px
+    width: 35px
+    border-bottom: 4px solid white
+    transform: rotate(45deg) 
+    &:nth-child(2)
+        transform: rotate(-45deg)
+
+        
