@@ -76,7 +76,7 @@ strong {
   top: 0;
 }
 
-.menu-button:hover, .popup-menu-button:hover {
+.menu-button:hover, .popup-menu-button:hover, .menu-item:hover {
   cursor: pointer;
 }
 
