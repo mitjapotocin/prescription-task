@@ -3,6 +3,7 @@ $gray: #333333
 $light-gray: #cccccc
 $footer-background: #f0f0f0
 $nav-background: #0d1a28
+$footer-color: #787878
 
 @font-face
     font-family: Exo Light
@@ -251,16 +252,6 @@ $icons: ("facebook":#3f5599,"twitter": #5fa9ef,"google": #d84335,"pinterest": #c
     .#{$icon}.hexagon:after
         border-top-color: $color
 
-footer
-    background-color: $footer-background
-    padding: 60px 0
-
-// .footer-container
-//     text-align: center
-//     color: $gray
-//     padding: 0 20px
-//     margin: 0 auto
-//     max-width: 1240px
 
 .popup-menu
     display: none
@@ -322,4 +313,45 @@ $menu-colors: ("1": #f9be18, "2": #f99442, "3": #f8656c, "4": #e2008a, "5": #b64
     &:nth-child(2)
         transform: rotate(-45deg)
 
-        
+footer
+    background-color: $footer-background
+    padding: 40px 0
+
+.address 
+    margin: 0 20px
+    p
+        color: $footer-color
+        font-size: 14px
+        font-family: 'Exo Regular'
+    a
+        font-family: 'Exo Regular'
+        color: $purple
+
+
+    
+.footer-links 
+    white-space: nowrap
+    position: relative
+    top: 8px
+    i
+        color: $footer-background
+    .hexagon
+        background-color: $footer-color
+        margin: 0 8px
+        &::before
+            border-bottom-color: $footer-color
+        &::after
+            border-top-color: $footer-color
+
+.footer-logo, .footer-links, .address
+    display: inline-block
+
+.footer-logo
+    position: relative
+    top: 6px
+
+.footer
+    display: grid
+    grid-template-columns: min-content minmax(700px, 1fr) min-content
+
+

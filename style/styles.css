@@ -349,11 +349,6 @@ main h2 {
   border-top-color: #3f96d6;
 }
 
-footer {
-  background-color: #f0f0f0;
-  padding: 60px 0;
-}
-
 .popup-menu {
   display: none;
   position: fixed;
@@ -431,6 +426,57 @@ footer {
 }
 .cross:nth-child(2) {
   transform: rotate(-45deg);
+}
+
+footer {
+  background-color: #f0f0f0;
+  padding: 40px 0;
+}
+
+.address {
+  margin: 0 20px;
+}
+.address p {
+  color: #787878;
+  font-size: 14px;
+  font-family: "Exo Regular";
+}
+.address a {
+  font-family: "Exo Regular";
+  color: #e1007e;
+}
+
+.footer-links {
+  white-space: nowrap;
+  position: relative;
+  top: 8px;
+}
+.footer-links i {
+  color: #f0f0f0;
+}
+.footer-links .hexagon {
+  background-color: #787878;
+  margin: 0 8px;
+}
+.footer-links .hexagon::before {
+  border-bottom-color: #787878;
+}
+.footer-links .hexagon::after {
+  border-top-color: #787878;
+}
+
+.footer-logo, .footer-links, .address {
+  display: inline-block;
+}
+
+.footer-logo {
+  position: relative;
+  top: 6px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: min-content minmax(700px, 1fr) min-content;
 }
 
 /*# sourceMappingURL=styles.css.map */
