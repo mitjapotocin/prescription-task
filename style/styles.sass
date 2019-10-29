@@ -17,7 +17,7 @@ $footer-color: #787878
 
 *
     box-sizing: border-box
-
+    
 body
     margin: 0
     color: white
@@ -26,7 +26,7 @@ a
     color: white
     text-decoration: none
     font-family: 'Lato', sans-serif
-
+    
 header
     width: 100%
     position: relative
@@ -391,7 +391,9 @@ footer
 
 @media screen and (max-width: 460px)
     .header-logo
-        opacity: 0
+        display: none
+    .header-content
+        padding-top: 195px
     .info-container
         display: block
     .info-bottom-border
@@ -403,7 +405,3 @@ footer
     .navigation-container
         padding: 0 0 35px 0
         display: block
-
-@media (min-aspect-ratio: 6/2)
-    .popup-menu-button
-        transform: scale(-1, 1)
