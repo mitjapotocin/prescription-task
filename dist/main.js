@@ -24,14 +24,16 @@ function closePopupMenu() {
 }
 
 for (i = 0; i < menuButtons.length; i++) {
-  menuButtons[i].addEventListener("mouseenter", e => {
-    popupMenu.style.backgroundBlendMode = "screen";
-    popupMenu.style.backgroundColor = window
-      .getComputedStyle(e.path[0])
-      .getPropertyValue("background-color");
-  });
+  menuButtons[i].addEventListener("mouseenter", changeBackgroundColor);
   menuButtons[i].addEventListener("mouseleave", () => {
     popupMenu.style.backgroundBlendMode = "lighten";
     popupMenu.style.backgroundColor = "#0d1a28";
   });
+}
+
+function changeBackgroundColor() {
+  popupMenu.style.backgroundBlendMode = "screen";
+  popupMenu.style.backgroundColor = window
+    .getComputedStyle(this)
+    .getPropertyValue("background-color");
 }

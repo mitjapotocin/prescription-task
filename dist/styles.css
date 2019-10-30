@@ -377,10 +377,10 @@ main h2 {
 
 .menu-items {
   float: right;
-  top: 50%;
+  top: 24vh;
   position: relative;
-  -webkit-transform: translateY(-50%) translateX(15%);
-          transform: translateY(-50%) translateX(15%);
+  -webkit-transform: translateX(15%);
+          transform: translateX(15%);
 }
 
 .menu-item {
